@@ -7,3 +7,7 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+
+
+Member.create!(first_name: 'John', last_name: 'Doe', gender: 'male', age: 30, role: 'doctor')
+Member.create!(first_name: 'Jane', last_name: 'Smith', gender: 'female',age: 25, role: 'patient')

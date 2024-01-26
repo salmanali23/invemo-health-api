@@ -31,3 +31,8 @@
 
 # Ignore master key for decrypting credentials and more.
 /config/master.key
+
+# local redis cache
+dump.rdb
+/node_modules
+.DS_Store

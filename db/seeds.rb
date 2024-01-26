@@ -9,5 +9,11 @@
 #   end
 
 
-Member.create!(first_name: 'John', last_name: 'Doe', gender: 'male', age: 30, role: 'doctor')
-Member.create!(first_name: 'Jane', last_name: 'Smith', gender: 'female',age: 25, role: 'patient')
+doctor = Member.create!(first_name: 'John', last_name: 'Doe', gender: 'male', age: 30, role: 'doctor')
+patient1 = Member.create!(first_name: 'Jane', last_name: 'Smith', gender: 'female',age: 25, role: 'patient')
+
+patient2 = Member.create!(first_name: 'Tom', last_name: 'hanks', gender: 'male',age: 67, role: 'patient')
+
+
+Opportunity.create(procedure_name: 'Procedure 1', patient: patient1, doctor: doctor, stage_history: {})
+Opportunity.create(procedure_name: 'Procedure 2', patient: patient2, doctor: doctor, stage_history: {})

@@ -6,4 +6,12 @@ FactoryBot.define do
     age { 30 }
     role { 'doctor' }
   end
+
+  trait :doctor do
+    role { 'doctor' }
+  end
+
+  trait :patient do
+    role { 'patient' }
+  end
 end

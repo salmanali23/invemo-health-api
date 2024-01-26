@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_01_26_124114) do
+ActiveRecord::Schema[7.1].define(version: 2024_01_26_131748) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -27,4 +27,17 @@ ActiveRecord::Schema[7.1].define(version: 2024_01_26_124114) do
     t.index ["last_name"], name: "index_members_on_last_name"
   end
 
+  create_table "opportunities", force: :cascade do |t|
+    t.text "procedure_name"
+    t.bigint "patient_id"
+    t.bigint "doctor_id"
+    t.jsonb "stage_history"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["doctor_id"], name: "index_opportunities_on_doctor_id"
+    t.index ["patient_id"], name: "index_opportunities_on_patient_id"
+  end
+
+  add_foreign_key "opportunities", "members", column: "doctor_id"
+  add_foreign_key "opportunities", "members", column: "patient_id"
 end

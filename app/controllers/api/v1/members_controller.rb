@@ -1,4 +1,4 @@
-class Api::V1::MembersController < ApplicationController
+class Api::V1::MembersController < Api::V1::BaseController
   include Resourceable
 
   def index

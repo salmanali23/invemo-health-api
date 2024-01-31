@@ -52,4 +52,8 @@ To get a local copy up and running follow these simple steps.
 
 5. Run test suits
 	`rspec`
-###
+## Postman Collection
+
+To explore the API endpoints of Invemo Health API, you can use the provided Postman collection. This collection includes pre-configured requests for all the available endpoints.
+
+- **Access the Collection**: [Invemo Postman Collection](https://drive.google.com/file/d/1TegK6wg1ZoqRbwsygMEsyM5hB_K-Qrec/view?usp=sharing)

@@ -4,5 +4,5 @@ json.doctor do
 end
 
 json.patient do
-  json.extract! opportunity.patient, :id, :first_name, :last_name, :gender, :age, :avatar
+  json.extract! opportunity.patient, :id, :first_name, :last_name, :avatar, :age, :gender
 end

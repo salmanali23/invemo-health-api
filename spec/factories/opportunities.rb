@@ -1,8 +1,11 @@
 FactoryBot.define do
   factory :opportunity do
     procedure_name { 'Sample Procedure' }
-    patient {}
-    doctor {}
-    stage_history { 'Sample Stage History' }
+    
+    association :patient, factory: [:member, :patient]
+    association :doctor, factory: :member
+
+    Time.now.utc.to_s
+    stage_history { [{"Lead": Time.now.utc.to_s}] }
   end
 end

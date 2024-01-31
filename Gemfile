@@ -2,7 +2,7 @@ source "https://rubygems.org"
 
 ruby "3.1.1"
 
-# Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
+# Bundle edge Rails instead: gem "rails", githuhttp://127.0.0.1:3000: "rails/rails", branch: "main"
 gem "rails", "~> 7.1.0"
 
 # Use postgresql as the database for Active Record
@@ -13,6 +13,18 @@ gem "puma", ">= 5.0"
 
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 gem "jbuilder"
+
+# gem for image upload and storage
+gem "cloudinary"
+gem 'carrierwave', '2.2.2'
+gem 'carrierwave_direct', '2.0.0'
+
+# gem for env
+gem 'dotenv-rails', '2.7.6'
+
+# gem for cors 
+gem 'rack-cors', '1.0.6'
+
 
 # Use Redis adapter to run Action Cable in production
 # gem "redis", ">= 4.0.1"

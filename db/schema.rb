@@ -36,6 +36,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_01_26_131748) do
     t.datetime "updated_at", null: false
     t.index ["doctor_id"], name: "index_opportunities_on_doctor_id"
     t.index ["patient_id"], name: "index_opportunities_on_patient_id"
+    t.index ["procedure_name"], name: "index_opportunities_on_procedure_name"
   end
 
   add_foreign_key "opportunities", "members", column: "doctor_id"

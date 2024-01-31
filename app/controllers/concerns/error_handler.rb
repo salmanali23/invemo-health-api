@@ -30,6 +30,10 @@ module ErrorHandler
       respond(:internal_server_error, e) unless Rails.env.test?
     end
 
+    rescue_from ArgumentError do |e|
+      respond(:unprocessable_entity, e)
+    end
+
     rescue_from ErrorHandler::CustomError do |e|
       respond(e.status, e)
     end

@@ -1,9 +1,12 @@
 class Api::V1::MembersController < Api::V1::BaseController
   include Resourceable
+  include CloudinaryHelper
 
   def index
-    filter_members
+  filter_members
+  render json: @resources
   end
+
 
   private
 

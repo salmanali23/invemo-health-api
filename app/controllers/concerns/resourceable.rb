@@ -16,10 +16,12 @@ module Resourceable
   end
 
   def update
+    
+    
     if @resource.update(resource_params)
       render :show, status: :ok
     else
-      render json: @resource.errors, status: :unprocessable_entity
+      render json: {errors: @resource.errors}, status: :unprocessable_entity
     end
   end
 
@@ -32,7 +34,7 @@ module Resourceable
     if @resource.save
       render :show
     else
-      render json: @resource.errors, status: :unprocessable_entity
+      render json: {errors: @resource.errors}, status: :unprocessable_entity
     end
   end
 
